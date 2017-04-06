@@ -20,7 +20,7 @@ pipeline {
         echo 'jenkins'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
         parallel(
           "hi": {
@@ -32,6 +32,11 @@ pipeline {
             
           }
         )
+      }
+    }
+    stage('end') {
+      steps {
+        echo 'end'
       }
     }
   }
