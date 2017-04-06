@@ -20,5 +20,19 @@ pipeline {
         echo 'jenkins'
       }
     }
+    stage('') {
+      steps {
+        parallel(
+          "hi": {
+            echo 'hi'
+            
+          },
+          "ha": {
+            echo 'ha'
+            
+          }
+        )
+      }
+    }
   }
 }
